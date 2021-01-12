@@ -1,0 +1,63 @@
+12/2/2020
+Bootstrap JS Modal Reference
+www.w3schools.com
+bootstrap con modales w3school
+
+https://www.w3schools.com/bootstrap/bootstrap_ref_js_modal.asp
+20:52
+13/2/2020
+.env
+ENV1 kB
+12:31
+23/2/2020
+https://www.google.es/search?sxsrf=ALeKk01Papsg1xAyeWPVny0RuiNvxZwmDA%3A1582474491480&ei=-6RSXuXlHI_oUba8n_AP&q=filtrar+registros+con+laravel+y+javascript&oq=filtrar+registros+con+laravel+y+ja&gs_l=mobile-gws-wiz-serp.1.0.33i160.1105.3999..5049...0.0..0.219.906.0j5j1......0....1.........0i22i30.VmUiquu6WBg
+17:31
+HOY
+libro dado
+12:41
+public Departamento buscarPorClave (int id) {
+		String consultaSQL = "select * from DEPART where DEPT='"+ id +"'";
+		Departamento dep = null;
+		try {
+			
+			Statement sentencia = (Statement) conn.getConnection().createStatement();
+			ResultSet filas = sentencia.executeQuery(consultaSQL);
+			filas.first();
+			dep = new Departamento(filas.getInt("DEPT"), filas.getString("DNOMBRE"), filas.getString("LOC"));
+
+	        } catch (SQLException e) {
+	            System.out.println("Error DepartamentoDao: " + e.getMessage());
+	            
+	        }
+		return dep;
+		
+	}
+12:41
+formulario edicion
+12:53
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Formulario Departamentos</title>
+</head>
+<body>
+<form id="formularioEdicion" action="departamento" method="post">
+<fieldset>
+<legend>Formulario alta Departamento</legend>
+<%
+	Departamento d = (Departamento) request.getAttribute("depart");  	
+
+	%>
+<input type="hidden" id="departamento" name="departamento" value="<%=d.getDept()%>"/>
+<p><label for="departamento">Departamento:</label> 	<%=d.getDept()%></p>
+<p><label for="nombre">Nombre:</label> 	<input type="text" id="nombre" name="nombre" value="<%=d.getDNombre()%>"/></p>
+<p><label for="localidad">Localidad:</label> <input type="text" id="localidad" name="localidad" value="<%=d.getLoc()%>"/></p>
+
+<input type="hidden" value="modifica" name="action"/>
+<p><input type="submit" value="Guardar" /></p>
+</fieldset>
+</form>
+
+</body>
+</html>
+12:53
