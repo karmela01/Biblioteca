@@ -5,7 +5,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-<title>préstamo</title>
+<title>libro</title>
 </head>
 <body>
 <div class ="container">
@@ -16,32 +16,34 @@
 	  <a class="navbar-brand" href="#">Préstamos</a>	 
 	</nav>
 	
-		<div id="formulario  mt-5">
+	
+	<!-- 
+	
+	
+	<div id="formulario  mt-5">
 	<div class="card" style="width: 18rem;">
 		  <div class="card-body">
-		    <h5 class="card-title">Formulario de préstamo</h5>
-			    <form action="prestamo">
+		    <h5 class="card-title">Registrar nuevo préstamo</h5>
+			    <form action="prestamo" method ="post">
 				  <div class="form-group">
-				    <label for="tituloLibro">Título libro</label>
-				    <input type="text" class="form-control" id="tituloLibro" name="tituloLibro">   
+				    <label for="titulo">Fecha</label>
+				    <input type="date" class="form-control" id="fecha" name="fecha">   
 				  </div>
 				  <div class="form-group">
-				    <label for="autor">Autor</label>
-				    <input type="text" class="form-control" id="autor" name="autor">
+				    <label for="nombre_usuario">Nombre Usuario</label>
+				    <input type="text" class="form-control" id="nombre_usuario" name="nombre_usuario">
 				  </div>
 				  <div class="form-group">
-				    <label for="editorial">Editorial</label>
-				    <input type="text" class="form-control" id="editorial" name="editorial">
+				    <label for="titulo-libro">Título Libro</label>
+				    <input type="text" class="form-control" id="titulo_libro" name="titulo_libro">
 				  </div>
 		  
-		 			<button type="submit" class="btn btn-primary">Solicitar</button>
+		 			<button type="submit" class="btn btn-primary">Registrar</button>
 				</form>
   			</div>
   		</div>
 	</div>
-    
-  </div>
-</div>
+	 -->
 </div>
 </body>
 </html>
